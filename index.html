@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新しいタブを開く</title>
+    <script>
+        function openNewTab() {
+            window.open('https://example.com', '_blank');
+        }
+
+        function openTabsContinuously() {
+            let i = 0;
+            const interval = setInterval(() => {
+                if (i < 10) {  // 10回まで開く
+                    openNewTab();
+                    i++;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 1000); // 1秒ごとに開く
+        }
+    </script>
 </head>
-
 <body>
-<script>
- setInterval(window.open, 1);
-</script>
+    <h1>新しいタブを開くデモ</h1>
+    <button onclick="openTabsContinuously()">新しいタブを開く</button>
 </body>
-
 </html>
